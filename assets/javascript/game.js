@@ -27,6 +27,8 @@ $(function () {
 
 
     // event listeners
+
+    // for Goku to move down
     $(".goku").on("click", function () {
         $(".goku").detach().appendTo(".character");
         $(".gohan").detach().appendTo(".enemies");
@@ -34,6 +36,7 @@ $(function () {
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
 
+        // for others to move down from character section
         if ($(".gohan").on("click", function () {
             $(".goku").detach().appendTo(".character");
             $(".gohan").detach().appendTo(".defender");
@@ -50,9 +53,11 @@ $(function () {
             $(".goku").detach().appendTo(".character");
             $(".vegeta").detach().appendTo(".defender");
         }));
+        // does this work? how do i make the functions stop at this point?
         setTimeout;
     });
 
+    // for Gohan to move down
     $(".gohan").on("click", function () {
         $(".gohan").detach().appendTo(".character");
         $(".goku").detach().appendTo(".enemies");
@@ -60,6 +65,7 @@ $(function () {
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
         
+        // for others to move down from character section
         if ($(".goku").on("click", function () {
             $(".gohan").detach().appendTo(".character");
             $(".goku").detach().appendTo(".defender");
@@ -76,9 +82,11 @@ $(function () {
             $(".gohan").detach().appendTo(".character");
             $(".vegeta").detach().appendTo(".defender");
         }));
+        
         setTimeout;
     });
 
+    // for Trunks to move down
     $(".trunks").on("click", function () {
         $(".trunks").detach().appendTo(".character");
         $(".goku").detach().appendTo(".enemies");
@@ -86,6 +94,7 @@ $(function () {
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
 
+        // for others to move down from character section
         if ($(".gohan").on("click", function () {
             $(".trunks").detach().appendTo(".character");
             $(".gohan").detach().appendTo(".defender");
@@ -102,9 +111,11 @@ $(function () {
             $(".trunks").detach().appendTo(".character");
             $(".vegeta").detach().appendTo(".defender");
         }));
+
         setTimeout;
     });
 
+    // for Buu to move down
     $(".buu").on("click", function () {
         $(".buu").detach().appendTo(".character");
         $(".goku").detach().appendTo(".enemies");
@@ -112,6 +123,7 @@ $(function () {
         $(".trunks").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
 
+        // for others to move down from character section
         if ($(".gohan").on("click", function () {
             $(".buu").detach().appendTo(".character");
             $(".gohan").detach().appendTo(".defender");
@@ -128,9 +140,11 @@ $(function () {
             $(".buu").detach().appendTo(".character");
             $(".vegeta").detach().appendTo(".defender");
         }));
+
         setTimeout;
     });
 
+    // for Vegeta to move down
     $(".vegeta").on("click", function () {
         $(".vegeta").detach().appendTo(".character");
         $(".goku").detach().appendTo(".enemies");
@@ -138,6 +152,7 @@ $(function () {
         $(".trunks").detach().appendTo(".enemies");
         $(".buu").detach().appendTo(".enemies");
 
+        // for others to move down from character section
         if ($(".gohan").on("click", function () {
             $(".vegeta").detach().appendTo(".character");
             $(".gohan").detach().appendTo(".defender");
@@ -154,6 +169,7 @@ $(function () {
             $(".vegeta").detach().appendTo(".character");
             $(".goku").detach().appendTo(".defender");
         }));
+
         setTimeout;
     });
 
