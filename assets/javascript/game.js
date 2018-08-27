@@ -60,9 +60,9 @@ $(function () {
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
         
-        if ($(".gohan").on("click", function () {
+        if ($(".goku").on("click", function () {
             $(".gohan").detach().appendTo(".character");
-            $(".gohan").detach().appendTo(".defender");
+            $(".goku").detach().appendTo(".defender");
         }));
         if ($(".trunks").on("click", function () {
             $(".gohan").detach().appendTo(".character");
@@ -90,9 +90,9 @@ $(function () {
             $(".trunks").detach().appendTo(".character");
             $(".gohan").detach().appendTo(".defender");
         }));
-        if ($(".trunks").on("click", function () {
+        if ($(".goku").on("click", function () {
             $(".trunks").detach().appendTo(".character");
-            $(".trunks").detach().appendTo(".defender");
+            $(".goku").detach().appendTo(".defender");
         }));
         if ($(".buu").on("click", function () {
             $(".trunks").detach().appendTo(".character");
@@ -120,9 +120,9 @@ $(function () {
             $(".buu").detach().appendTo(".character");
             $(".trunks").detach().appendTo(".defender");
         }));
-        if ($(".buu").on("click", function () {
+        if ($(".goku").on("click", function () {
             $(".buu").detach().appendTo(".character");
-            $(".buu").detach().appendTo(".defender");
+            $(".goku").detach().appendTo(".defender");
         }));
         if ($(".vegeta").on("click", function () {
             $(".buu").detach().appendTo(".character");
@@ -150,9 +150,9 @@ $(function () {
             $(".vegeta").detach().appendTo(".character");
             $(".buu").detach().appendTo(".defender");
         }));
-        if ($(".vegeta").on("click", function () {
+        if ($(".goku").on("click", function () {
             $(".vegeta").detach().appendTo(".character");
-            $(".vegeta").detach().appendTo(".defender");
+            $(".goku").detach().appendTo(".defender");
         }));
         setTimeout;
     });
