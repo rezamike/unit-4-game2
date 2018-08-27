@@ -2,6 +2,7 @@ body {
     box-sizing: border-box;
     position: relative;
     background-image: url("../images/kaiworld.jpg");
+    font-family: 'Acme', sans-serif;
 }
 
 .title {
@@ -9,19 +10,32 @@ body {
     width: auto;
     height: 150px;
     margin-top: 20px;
+    margin-right: -75px;
+    margin-bottom: -75px;
 }
 
 h2 {
-    font-family: 'Acme', sans-serif;
     color: yellow;
     border: 3px solid black;
     background-color: red;
-    font-size: 48px;
+    font-size: 36px;
     padding: 5px;
     float: left;
 }
 
 .button {
-    height: 200px;
+    padding: 10px 5px 10px 5px;
+    height: 175px;
     width: auto;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+    float: left;
+}
+
+
+#restart {
+    display: none;
 }
