@@ -3,28 +3,23 @@ $(function () {
     // build players, health, and power level
     let players = [
         {
-            name: "Goku", 
-            health: 94, 
+            name: "Goku",
+            health: 94,
             level: 4
         },
         {
-            name: "Gohan", 
-            health: 64, 
+            name: "Gohan",
+            health: 64,
             level: 2
         },
         {
-            name: "Trunks", 
-            health: 73, 
-            level: 3
-        },
-        {
-            name: "Majin-Buu", 
-            health: 90, 
+            name: "Majin-Buu",
+            health: 90,
             level: 4
         },
         {
-            name: "Vegeta", 
-            health: 81, 
+            name: "Vegeta",
+            health: 81,
             level: 4
         }
     ]
@@ -46,7 +41,7 @@ $(function () {
         }
     });
 
-    let beam = $("#beam").on("click", function (){
+    let beam = $("#beam").on("click", function () {
         if (players[index].level = 3) {
             Math.floor(Math.random() * (15)) + 30;
         }
@@ -55,11 +50,34 @@ $(function () {
         }
     });
 
-    // maybe a restart function?
-    // let restart = reload();
 
 
     // ------------------------- event listeners
+
+    // show name and health?
+    $(".goku").hover(function () {
+        $(".stats").html("<br>" + "Name: " + players[0].name + "<br>");
+        $(".stats").append("Health: " + players[0].health + "<br>");
+        $(".stats").append("Level: " + players[0].level + "<br>");
+    })
+
+    $(".gohan").hover(function () {
+        $(".stats").html("<br>" + "Name: " + players[1].name + "<br>");
+        $(".stats").append("Health: " + players[1].health + "<br>");
+        $(".stats").append("Level: " + players[1].level + "<br>");
+    })
+
+    $(".buu").hover(function () {
+        $(".stats").html("<br>" + "Name: " + players[2].name + "<br>");
+        $(".stats").append("Health: " + players[2].health + "<br>");
+        $(".stats").append("Level: " + players[2].level + "<br>");
+    })
+
+    $(".vegeta").hover(function () {
+        $(".stats").html("<br>" + "Name: " + players[3].name + "<br>");
+        $(".stats").append("Health: " + players[3].health + "<br>");
+        $(".stats").append("Level: " + players[3].level + "<br>");
+    })
 
 
     // for Goku to move down
@@ -70,7 +88,7 @@ $(function () {
         $(".trunks").detach().appendTo(".enemies");
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
-         
+
         // for others to move down from character section
         if ($(".gohan").on("click", function () {
             $("img").off();
@@ -102,7 +120,7 @@ $(function () {
         $(".trunks").detach().appendTo(".enemies");
         $(".buu").detach().appendTo(".enemies");
         $(".vegeta").detach().appendTo(".enemies");
-        
+
         // for others to move down from character section
         if ($(".goku").on("click", function () {
             $("img").off();
@@ -122,38 +140,6 @@ $(function () {
         if ($(".vegeta").on("click", function () {
             $("img").off();
             $(".gohan").detach().appendTo(".character");
-            $(".vegeta").detach().appendTo(".defender");
-        }));
-    });
-
-    // for Trunks to move down
-    $(".trunks").on("click", function () {
-        $("img").off();
-        $(".trunks").detach().appendTo(".character");
-        $(".goku").detach().appendTo(".enemies");
-        $(".gohan").detach().appendTo(".enemies");
-        $(".buu").detach().appendTo(".enemies");
-        $(".vegeta").detach().appendTo(".enemies");
-
-        // for others to move down from character section
-        if ($(".gohan").on("click", function () {
-            $("img").off();
-            $(".trunks").detach().appendTo(".character");
-            $(".gohan").detach().appendTo(".defender");
-        }));
-        if ($(".goku").on("click", function () {
-            $("img").off();
-            $(".trunks").detach().appendTo(".character");
-            $(".goku").detach().appendTo(".defender");
-        }));
-        if ($(".buu").on("click", function () {
-            $("img").off();
-            $(".trunks").detach().appendTo(".character");
-            $(".buu").detach().appendTo(".defender");
-        }));
-        if ($(".vegeta").on("click", function () {
-            $("img").off();
-            $(".trunks").detach().appendTo(".character");
             $(".vegeta").detach().appendTo(".defender");
         }));
     });
@@ -222,7 +208,21 @@ $(function () {
         }));
     });
 
-    // reading player stats on document
-    
+    // turn off hover
 
+    // reading player stats on document
+    if ($(".character").find(players)) {
+        $(".stats").html("");
+        $(".stats").html("<br>" + "Name: " + players.name + "<br>");
+        $(".stats").append("Health: " + players.health + "<br>");
+    }
+
+    else if ($(".defender").find(players)) {
+        $(".stats").html("");
+        $(".stats").append("<br>" + "Name: " + players.name + "<br>");
+        $(".stats").append("Health: " + players.health + "<br>");
+    }
+
+    // a reset function
+    // let restart = reload();
 })
